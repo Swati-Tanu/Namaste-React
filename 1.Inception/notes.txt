@@ -1,0 +1,14 @@
+React - A JavaScript Library 
+
+It was developed by Jordan Walke, a software engineer at Facebook.
+
+cdn -
+
+crossorigin - 
+
+Library Vs Framework - 
+
+In cdn link the first one (react.development) consists core react code. While the second one (react-dom.development) consists code to modify the dom. We have two seperate files because React works on browsers, mobile phones, as 3D etc.
+
+
+
