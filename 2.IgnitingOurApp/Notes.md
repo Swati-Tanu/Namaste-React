@@ -42,5 +42,11 @@ Command to run parcel: `npx parcel index.html`
 14. Diagonistic 
 15. Error Handling
 16. With the help of parcel we can host our website on https as well
+17. Tree shaking (Remove unused code)
+18. Different dev and production bundles.
+19. prod build command: `npm parcel build index.html`, if error remove main from script file.
+
+
+
 
 
