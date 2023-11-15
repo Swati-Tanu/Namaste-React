@@ -9,8 +9,7 @@
   "author": "Swati Tanu",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.10.2",
-    "process": "^0.11.10"
+    "parcel": "^2.10.2"
   },
   "dependencies": {
     "react": "^18.2.0",

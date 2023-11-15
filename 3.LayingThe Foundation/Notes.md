@@ -12,4 +12,13 @@ JSX => Gets transpiled by Parcel with the help of Babel before it reaches the JS
 
 To give an attribute in JSX we have to use camel case, eg; className.
 
+When writing multiple line codes in JSX use ().
+
+#### React Component: Everything in react is a component.
+
+There are two types of components:
+1. Class Based Component (Old way)
+2. Functional Component (New Way) : A normal JS function which returns some JSX element. Always name it with a capital letter.
+
+
 
