@@ -12,13 +12,24 @@ JSX => Gets transpiled by Parcel with the help of Babel before it reaches the JS
 
 To give an attribute in JSX we have to use camel case, eg; className.
 
-When writing multiple line codes in JSX use ().
+When writing multiple line codes in JSX use (). If we use {} anywhere inside JSX, we can run any JS code in the bracket.
+
+JSX also prevents cross-side scripting attacks. It sanitises every piece of code wriiten inside JSX.
 
 #### React Component: Everything in react is a component.
 
 There are two types of components:
 1. Class Based Component (Old way)
-2. Functional Component (New Way) : A normal JS function which returns some JSX element. Always name it with a capital letter.
+2. Functional Component (New Way) : A normal JS function which returns some JSX element. Always name it with a capital letter. We can also write normal function with a return statement than writing it as an arrow function.
+
+We cannot render a component, we render an element, therefore this syntax: <HeadingComponent/>
+
+`Component Composition: It is composing two or more components in one.`
+
+We can put/compose React element in another element or functional component and vice versa.
+
+
+
 
 
 
