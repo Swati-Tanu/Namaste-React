@@ -9,7 +9,7 @@
 }
 
 .nav-items > ul {
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     list-style-type: none;
 }
@@ -42,4 +42,34 @@
 .res-container{
     display: flex;
     flex-wrap: wrap;
+}
+
+.nav-items>ul>li {
+    padding: 10px;
+    margin: 10px
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.res-card {
+    margin: 5px;
+    padding: 18px;
+    width: 200px;
+    height: auto;
+}
+
+.res-card:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.search {
+    padding: 10px
+}
+
+.res-logo {
+    width: 100%;
 }
