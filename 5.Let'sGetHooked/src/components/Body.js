@@ -7,6 +7,10 @@ const Body = () => {
 
   //State Variable - Super powerful variable using Hooks
   const [listOfRestraunt, setListOfRestraunt] = useState(resList)
+  
+  //The above line is same as the below:
+  // const arr = useState(resList)
+  // const [listOfRestraunt, setListOfRestraunt] = arr;
 
   return (
     <div className="body">
