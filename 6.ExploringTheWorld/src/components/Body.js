@@ -1,4 +1,4 @@
-import RestaurantCard from "./Restraurant";
+import RestaurantCard from "./Restaurant";
 import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
@@ -6,6 +6,8 @@ import Shimmer from "./Shimmer";
 //Body Component
 const Body = () => {
   const [listOfRestraunt, setListOfRestraunt] = useState(resList || [])
+  const [filteredResturant, setFilteredResturant] = useState([])
+  const [searchText, setSearchText] = useState("")
   
   //The two parameter in useEffect are first one is a callback function and a dependency array.
 
@@ -21,18 +23,35 @@ const Body = () => {
       );
       const json = await data.json();
       // console.log(json)
-      console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+      console.log(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants)
       setListOfRestraunt(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+      setFilteredResturant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
 
-if(listOfRestraunt.length === 0) {
-  return Shimmer
-  // <h1>Loading...</h1>
-}
+  //Conditional Rendering
+  // if(listOfRestraunt.length === 0) {
+  //  return <Shimmer/>
+  //  // <h1>Loading...</h1>
+  // }
 
-  return (
+  return listOfRestraunt === 0 ? <Shimmer/> :(
     <div className="body">
       <div className="fitler">
+        <div className="search">
+          <input type="text" className="search-box" value={searchText} onChange={(e) => {
+            setSearchText(e.target.value);
+          }}/>
+          <button
+          onClick={() => {
+            console.log(searchText)
+            const filteredResturant = listOfRestraunt.filter((res)=>{
+              res.data.name.toLowerCase().includes() === searchText.toLowerCase()
+            })
+
+            setFilteredResturant(filteredResturant);
+
+          }}>Search</button>
+        </div>
         <button className="filter-btn" onClick={()=>{
           // console.log("Button Clicked!")
           const filteredList = listOfRestraunt.filter((res)=> res.data.avgRating > 4);
@@ -43,7 +62,7 @@ if(listOfRestraunt.length === 0) {
         </button>
       </div>
       <div className="res-container">
-        {listOfRestraunt.map((restaurant) => (
+        {filteredResturant.map((restaurant) => (
           <RestaurantCard key={restaurant.data.id} resData={restaurant} />
         ))}
       </div>

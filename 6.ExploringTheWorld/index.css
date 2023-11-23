@@ -86,3 +86,12 @@
     background-color: #f0f0f0;
     margin: 20px;
 }
+
+.login{
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.filter {
+    display: flex;
+}
