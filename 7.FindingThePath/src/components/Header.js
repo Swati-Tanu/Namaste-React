@@ -1,11 +1,8 @@
 import { useState } from "react";
 import logo from "../../images/logo.png";
 
-// Header Component
 export const Header = () => {
 
-    // let btnName = "Login";
-    
     const [btnNameReact, setbtnNameReact] = useState("Login")
 
     return (
@@ -28,12 +25,9 @@ export const Header = () => {
                         }}
                     >
                         {btnNameReact}
-                        {/* {btnName} */}
                     </button>
                 </ul>
             </div>
         </div>
     )
 };
-
-// export default Header;
