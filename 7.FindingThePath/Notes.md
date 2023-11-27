@@ -37,4 +37,5 @@ There are two types of Routing in web application:
 1. Client Side Routing: This app is the example of this. We get the data loaded in the very first time we load the app and after that no network call is make. It just loads different components.
 2. Server Side Routing: Make a network call and the server sends the whole page and gets rendered on the UI.
 
+#### Dynamic Routing
 
