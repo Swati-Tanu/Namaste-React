@@ -7,9 +7,9 @@ const About = () => {
             <h1>About</h1>
             <h2>This is about us page</h2>
             <h3>Using Functional Component:</h3>
-            <User/>
+            <User name={"Tanu (function component)"}/>
             <h3>Using Class based Component:</h3>
-            <UserClass/>
+            <UserClass name={"Tanu (class component)"} location={"Kolkata"}/>
         </div>
     )
 }
