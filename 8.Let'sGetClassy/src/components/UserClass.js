@@ -21,6 +21,14 @@ class UserClass extends React.Component {
          <div className = "user-card">
             <h5>Count = {this.state.count}</h5>
             <h5>Count2 = {count2}</h5>
+            <button onClick={() => {
+                // Never update state variable directly as below:
+                // this.state.count = this.state.count + 1 (Won't work!!!)
+                this.setState({
+                    count2: this.state.count2 + 1
+                })
+
+            }}>Count Increase</button>
             {/* <h2>Name: Tanu</h2> */}
             <h2>Name: {this.props.name}</h2>
             {/* <h3>Location: Kolkata</h3> */}

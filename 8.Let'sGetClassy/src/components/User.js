@@ -3,6 +3,7 @@ import { useState } from "react";
 // const User = (props) => {
 const User = ({name}) => {
     const [count] = useState(0);
+    // We can update it using setCount. 
     const [count2] = useState(1);
     return (
     <div className = "user-card">
