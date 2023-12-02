@@ -11,13 +11,13 @@ class UserClass extends React.Component {
             count: 0,
             count2: 1
         }
-        console.log("3. Child Constructor")
+        console.log(this.props.name + "3. Child Constructor")
 
     }
 
     // We use componentDidMount to make API call, why? Refer Notes.
     componentDidMount() {
-        console.log("5. Child Component Did Mount")
+        console.log(this.props.name + "5. Child Component Did Mount")
 
         // API call
     }
@@ -26,7 +26,7 @@ class UserClass extends React.Component {
         const {location} = this.props
         const {count2} = this.state
 
-        console.log("4. Child Render")
+        console.log(this.props.name + "4. Child Render")
 
         return (
          <div className = "user-card">
