@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // const User = (props) => {
 const User = ({name}) => {
     const [count] = useState(0);
     // We can update it using setCount. 
     const [count2] = useState(1);
+
+    useEffect (() => {
+        //API call
+    }, [])
+
     return (
     <div className = "user-card">
         <h5>Count = {count}</h5>
