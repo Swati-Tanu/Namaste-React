@@ -35,10 +35,18 @@ class About extends React.Component{
     }
 
     componentDidUpdate() {
+        // Reason why we need to unmount!
+        this.timer = setInterval(() => {
+            console.log("From setInterval")
+        }, 1000)
+
         console.log("Component Did Update");
     }
 
     componentWillUnmount(){
+        // This is how we clear the interval we started in componentDidUpdate()
+
+        clearInterval(this.timer);
         console.log("Component Will Unmount");
     }
 
