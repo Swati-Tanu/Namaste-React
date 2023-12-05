@@ -8,3 +8,24 @@ Whenever a component is mounted on the web page it renders the JSX present in it
 
 We use componentDidMount to make API call in CBC like we do using useEffect in FBC. We use both these because React wants quickly render the component, then make an API call and fill the data by re-rendering the component.
 
+2. Updated
+
+3. Unmounted
+
+#### Following is the complete 
+
+<---------Mounting Cycle--------->
+-- Constructor
+-- Render
+-- HTML Dummy
+-- Component Did Mount
+-- API call
+-- this.setState --> State variable is updated
+
+<---------Updating Cycle---------->
+-- render(API data)
+-- HTML loaded with new API data
+-- Component Did Update
+
+<----------Unmounting Cycle-------->
+-- As soon as we go to any other page Component Will Unmount will be called.
