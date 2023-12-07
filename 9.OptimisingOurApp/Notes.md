@@ -3,3 +3,12 @@ If we have a function, a class or any single identity, that should have a single
 
 ### Custom Hooks
 At the end of the day, hook is just a utility function.
+
+#### This process of making smaller bundles of files of an app is called:
+
+- Chunking
+- Code splitting
+- Lazy loading
+- Dynamic bundling
+- Dynamic import
+- On demand loading
